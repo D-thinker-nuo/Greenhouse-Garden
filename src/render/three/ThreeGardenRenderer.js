@@ -101,7 +101,7 @@ export class ThreeGardenRenderer extends RendererAdapter {
       new THREE.MeshStandardMaterial({ color: 0x64a16a, roughness: 0.9 })
     );
     this.ground.rotation.x = -Math.PI / 2;
-    this.ground.position.set(0, 0, -410);
+    this.ground.position.set(0, 0, 0);
     this.ground.receiveShadow = true;
     this.world.add(this.ground);
 
@@ -135,8 +135,8 @@ export class ThreeGardenRenderer extends RendererAdapter {
     const height = this.container.clientHeight || window.innerHeight;
     this.renderer.setSize(width, height, false);
     this.camera.aspect = width / height;
-    this.camera.position.set(0, 440, 930);
-    this.camera.lookAt(0, 0, -420);
+    this.camera.position.set(750, 390, 750);
+    this.camera.lookAt(650, 0, 0);
     this.camera.updateProjectionMatrix();
     this.store.setViewport(width, height);
   }
