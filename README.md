@@ -56,19 +56,20 @@ src/
         PollenView.js             # Pollen particle view / 花粉视图
         FireflyView.js            # Firefly view / 萤火虫视图
         CloudView.js              # Cloud view / 云朵视图
-      raytracing/
-        RayTracingRenderer.js
-        ray/
-          generateRay.js
-          intersectSphere.js
-          intersectPlane.js
-          closestHit.js
-        shading/
-          directLight.js
-          lambert.js
-        scene/
-          sceneObjects.js
-          materials.js
+
+  raytracing/
+    RayTracingRenderer.js
+    ray/
+      generateRay.js
+      intersectSphere.js
+      intersectPlane.js
+      closestHit.js
+    shading/
+      directLight.js
+      lambert.js
+    scene/
+      sceneObjects.js
+      materials.js
 ```
 
 ## Design Notes
