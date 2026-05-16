@@ -74,11 +74,18 @@ export class ThreeGardenRenderer extends RendererAdapter {
     const sun = new THREE.DirectionalLight(0xfff2cc, 2.2);
     sun.position.set(-360, 780, 520);
     sun.castShadow = true;
-    sun.shadow.mapSize.set(1024, 1024);
-    sun.shadow.camera.left = -1100;
-    sun.shadow.camera.right = 1100;
-    sun.shadow.camera.top = 1100;
-    sun.shadow.camera.bottom = -1100;
+
+    sun.shadow.bias = -0.0002;
+    sun.shadow.radius = 4;
+    
+    sun.shadow.mapSize.set(2048, 2048);
+    sun.shadow.camera.left = -500;
+    sun.shadow.camera.right = 500;
+    sun.shadow.camera.top = 500;
+    sun.shadow.camera.bottom = -500;
+
+    sun.shadow.camera.near = 1;
+    sun.shadow.camera.far = 2000;
 
     const warmPoint = new THREE.PointLight(0xffecbe, 1.4, 1600);
     warmPoint.position.set(-360, 320, 180);
