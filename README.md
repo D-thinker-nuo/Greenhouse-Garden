@@ -56,6 +56,9 @@ src/
         PollenView.js             # Pollen particle view / 花粉视图
         FireflyView.js            # Firefly view / 萤火虫视图
         CloudView.js              # Cloud view / 云朵视图
+      sdf\shaders/
+        flower.frag
+        flower.vert
 
 ```
 
