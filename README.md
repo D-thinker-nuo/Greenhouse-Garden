@@ -53,12 +53,11 @@ src/
         gardenResources.js        # Shared GPU resources / 共用几何和材质
       objects/
         FlowerView.js             # Flower mesh view / 花朵视图
+          flower.frag               # fragment shader / 像素着色器
+          flower.vert               # vertex shader / 顶点着色器
         PollenView.js             # Pollen particle view / 花粉视图
         FireflyView.js            # Firefly view / 萤火虫视图
         CloudView.js              # Cloud view / 云朵视图
-      sdf\shaders/
-        flower.frag               # fragment shader / 像素着色器
-        flower.vert               # vertex shader / 顶点着色器
 
 ```
 
