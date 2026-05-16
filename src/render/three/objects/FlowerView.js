@@ -205,7 +205,7 @@ function opacityFromGrowth(growth) {
 // Create a material for petal or flower center.
 // 创建花瓣或花心材质。
 function flowerMaterial(color, emissive = false) {
-  return new THREE.MeshStandardMaterial({
+  const material = new THREE.MeshStandardMaterial({
     color,
     emissive: emissive ? color : "#000000",
     emissiveIntensity: emissive ? 0.35 : 0,
