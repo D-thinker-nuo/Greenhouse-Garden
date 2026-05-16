@@ -212,6 +212,28 @@ function flowerMaterial(color, emissive = false) {
     roughness: 0.62,
     metalness: 0.02,
   });
+
+  // 在着色器里添加边缘光效果，让花朵更亮眼
+  // Add a rim lighting effect in the shader for extra pop
+  material.onBeforeCompile = (shader) => {
+
+    shader.fragmentShader = shader.fragmentShader.replace(
+
+      "#include <opaque_fragment>",
+
+      `
+      #include <opaque_fragment>
+
+      vec3 viewDir = normalize(-vViewPosition);
+      float rim = 1.0 - max(dot(-viewDir, normal), 0.0);
+      rim = pow(rim, 4.0);
+      gl_FragColor.rgb += vec3(1.0, 0.35, 0.2) * rim * 0.5;
+      `
+    );
+  };
+
+  material.needsUpdate = true;
+  return material;
 }
 
 // Lighten a hex color without needing a separate color library.
